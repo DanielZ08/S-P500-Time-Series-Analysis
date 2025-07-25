@@ -1,7 +1,7 @@
 # S&P500 Time Series Analysis
 ## Executive Summary
 
-Between 2014 and 2017, the S&P 500 demonstrated a general upward trend with some moderate volatility and temporary drawdowns. Strong recoveries followed key downturns, particularly during early 2016. Return distributions were non-normal and exhibited fat tails, indicating frequent extreme values. Our synthetic index showed sustained bullish behavior, with multiple bullish “golden cross” signals observed during the analysis period. While daily returns were stationary, prices were not—supporting the use of return-based models for forecasting. Volume data showed weak correlation with price moves. Seasonality was evident in day-of-week and monthly return patterns, including mild “January effects.”
+Between 2014 and 2017, the S&P 500 demonstrated a general upward trend with some moderate volatility and temporary drawdowns. Strong recoveries followed key downturns, particularly during early 2016. Return distributions were non-normal and exhibited fat tails, indicating frequent extreme values. Our synthetic index showed sustained bullish behavior, with multiple bullish “golden cross” signals observed during the analysis period. While daily returns were stationary, prices were not, supporting the use of return-based models for forecasting. Volume data showed weak correlation with price moves. Seasonality was evident in day-of-week and monthly return patterns, including mild “January effects.”
 
 
 ## Time Series Insights 
@@ -11,12 +11,14 @@ Between 2014 and 2017, the S&P 500 demonstrated a general upward trend with some
 - Overall, the S&P 500 experienced a bullish trend during this period.
 - The synthetic index showed strong upward momentum, especially in 2017.
 - After a choppy 2015 and a pullback in early 2016, the market entered a sustained bull run throughout the remainder of 2016 and 2017.
+<img width="971" height="502" alt="Image" src="https://github.com/user-attachments/assets/3a54e915-8dc4-4a7e-941f-6a5915f9cae0" />
 
 ### Volatility and Fluctuations
 
 - Volatility was relatively modest overall, with spikes in early 2016 (market fears around global growth) and during brief corrections.
 - Rolling 30-day standard deviation showed heightened volatility in Q1 2016 and stable behavior throughout 2017.
 - Volatility dropped significantly in 2017, coinciding with a low-VIX environment.
+<img width="965" height="424" alt="Image" src="https://github.com/user-attachments/assets/697fb4c2-520f-47e9-b974-14f1bf7adb94" />
 
 ### Seasonality & Calendar Effects
 
@@ -34,14 +36,17 @@ Between 2014 and 2017, the S&P 500 demonstrated a general upward trend with some
 
 ### Correlation with Volume
 - Correlation between daily returns and volume was low overall (~0.02 to 0.05).
-- Spikes in volume typically followed—not preceded—large price movements.
+- Spikes in volume typically followed, not preceded, large price movements.
 - No evidence of predictive power in volume spikes alone for anticipating large returns.
+<img width="862" height="792" alt="Image" src="https://github.com/user-attachments/assets/6838221e-3b8c-4fcc-a975-dc983887febf" />
+
 
 ### Return Distributions
 
 - Daily returns were centered around 0.04% with a standard deviation of ~0.65%.
 - Returns showed excess kurtosis and slight negative skew—meaning frequent extreme events (fat tails).
 - Returns were not normally distributed (verified via histogram and statistical tests).
+<img width="997" height="437" alt="Image" src="https://github.com/user-attachments/assets/229965d0-7123-4df4-bb24-9b03e21d7496" />
 
 ### Stationarity and Forecasting
 
@@ -67,12 +72,12 @@ Between 2014 and 2017, the S&P 500 demonstrated a general upward trend with some
 - Incorporate moving average crossovers with volatility measures for strategy signals.
 - Watch for early-year (January) momentum and weekday anomalies as potential trading cues.
 - Consider stress-testing portfolios with fat-tailed distributions rather than assuming normal returns.
-- Be cautious in relying on volume for predictive signals—combine it with price and volatility filters.
+- Be cautious in relying on volume for predictive signals, combine it with price and volatility filters.
 
 
 ## Assumptions & Caveats
 
-- The synthetic index is equally weighted—not market-cap-weighted like the real S&P 500.
+- The synthetic index is equally weighted, not market-cap-weighted like the real S&P 500.
 - Corporate actions (splits/dividends) may not be fully adjusted in prices.
 - Risk-free rate assumed to be 0 for Sharpe ratio calculations.
 - Forecasting models were univariate and not trained on macroeconomic features or external signals.
